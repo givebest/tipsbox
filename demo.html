@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<title>tips box</title>
+<link rel="stylesheet" href="css/normalize.css" /><!-- 重置浏览器默认 -->
+<link rel="stylesheet" href="css/table.css" /><!-- 弹窗有表格数据时引用 -->
+<link rel="stylesheet" href="css/paging.css" /><!-- 弹窗有分页时引用 -->
+<link rel="stylesheet" href="css/form.css" /><!-- 弹窗有表单时引用 -->
+<link rel="stylesheet" href="css/tipsbox.css" /><!-- 弹窗基础样式 -->
+<style type="text/css">
+	body{
+		padding:20px 22%;
+		background-color:#f3f3f3;
+	}
+	hr{
+		height:20px;
+		border:none;
+		border-top:1px solid #f3f3f3;
+		filter:alpha(opacity=0);
+	}
+	@font-face {
+		font-family: "tipsbox";
+		src: url("font/fonticon.eot"); /* IE9 */
+		src: url("font/fonticon.eot#iefix") format("embedded-opentype"), /* IE6-IE8 */
+		url("font/fonticon.woff") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+		url("font/fonticon.ttf")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+		url("font/fonticon.svg") format("svg"); /* iOS 4.1- */
+	}
+	.iconfont {
+		font-family:"tipsbox";
+		font-style: normal;
+		font-weight: normal;
+		cursor: default;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke-width: 0.2px;
+	}
+</style>
+</head>
+<body>
+<!--一行提示-->
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">提示</h3>
+        <span class="ui-box-head-text">其他文字</span>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox ui-tipbox-message">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="提示">&#xF046;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ui-tipbox-title-simple">
+
+    过关投注请至少选择2场及2场以上比赛</h3>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">确定</button></p>
+				</div>
+	</div>
+</div>
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">警告</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox ui-tipbox-warning">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="警告">&#xF047;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ">帐号余额不足，您可在充值后继续购买</h3>
+					<p class="ui-tipbox-explain">你当前余额为￥100元 </p>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">充值</button><button class="ui-button ui-button-lwhite">取消</button></p>
+				</div>
+	</div>
+</div>
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">成功</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox ui-tipbox-success">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="成功">&#xF049;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ">恭喜您！购彩成功！</h3>
+					<p class="ui-tipbox-explain">预祝您中大奖，发大财! </p>
+					<p class="ui-tipbox-explain"><a href="#">返回继续购买</a> | <a href="#">查看方案</a></p>
+				</div>
+	</div>
+</div>
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">错误</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox  ui-tipbox-error">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="出错">&#xF045;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ui-tipbox-title-simple">亲，出错了哦</h3>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">返回</button></p>
+				</div>
+	</div>
+</div>
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">阻止</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox  ui-tipbox-stop">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="阻止">&#xF048;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ui-tipbox-title-simple">亲，不能重复购买哦</h3>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">返回</button></p>
+				</div>
+	</div>
+</div>
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">等待</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox  ui-tipbox-wait">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="等待">&#xF04B;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ui-tipbox-title-simple">亲，抢购中，请稍等</h3>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">返回</button></p>
+				</div>
+	</div>
+</div>
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">疑问</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container ui-tipbox  ui-tipbox-question">
+				<div class="ui-tipbox-icon">
+					<i class="iconfont" title="疑问">&#xF04A;</i>
+				</div>
+				<div class="ui-tipbox-content">
+					<h3 class="ui-tipbox-title ui-tipbox-title-simple">亲，确定购买1000倍？</h3>
+					<p class="ui-tipbox-explain ui-tipbox-ctrl"><button class="ui-button ui-button-lorange">确定</button><button class="ui-button ui-button-lwhite">返回</button></p>
+				</div>
+	</div>
+</div>
+
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">注册</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container">
+			<div class="ui-box-content">
+				<form class="ui-form" name="" method="post" action="#" id="">
+					<fieldset>
+						<legend>用户注册</legend>
+
+						<div class="ui-form-item">
+							<label for="" class="ui-label">
+								<span class="ui-form-required">*</span>邮箱
+							</label>
+							<input class="ui-input" type="text" placeholder="example@example.com"> <span class="ui-form-other"><a href="#">备注</a></span>
+							<p class="ui-form-explain">请输入邮箱</p>
+						</div>
+
+						<div class="ui-form-item ui-form-item-error">
+							<label for="" class="ui-label"><span class="ui-form-required">*</span>密码</label>
+							<input class="ui-input ui-input-large" type="password"> <span class="ui-form-other"><a href="#">表单项</a></span>
+							<p class="ui-form-explain ui-tiptext ui-tiptext-error">
+								<i class="ui-tiptext-icon iconfont" title="出错">&#xF045;</i>
+								此在DOM上保存属性值，请使用data-xxx的形式。
+							</p>
+						</div>
+
+						<div class="ui-form-item ui-form-item-success">
+							<label for="" class="ui-label">
+								<span class="ui-form-required">*</span>重复密码
+							</label>
+							<input class="ui-input" type="password">
+							<p class="ui-form-explain ui-tiptext ui-tiptext-success"> <i class="ui-tiptext-icon iconfont" title="成功">&#xF049;</i> 成功</p>
+						</div>
+
+						<div class="ui-form-item">
+							<label for="" class="ui-label">验证码</label>
+							<input class="ui-input ui-input-checkcode" type="text" data-explain="请输入右图中字符，不区分大小写。" maxlength="4" autocomplete="off" value="" name="fourcode">
+							<!-- <img class="ui-checkcode-imgcode-img" align="absMiddle" alt="请输入您看到的内容" src="https://omeo.alipay.com/service/checkcode?sessionID=82012ab6b1f4ed9e675fb9092a25cb3b&r=0.9321065918075809"  title="点击刷新图片校验码"> -->
+							<a href="#">看不清，换一张</a>
+							<div class="ui-form-explain">请输入右图中字符，不区分大小写。</div>
+						</div>
+
+		
+						<div class="ui-form-item">
+							<label for="test">
+								<input class="ui-checkbox" id="test" value="" type="checkbox">
+								我已满18岁并接受“<a href="#">网站服务协议</a>”
+							</label>
+						</div>
+
+						<div class="ui-form-item ui-form-item-last">
+							<input type="submit" class="ui-button ui-button-lorange" value="注册">
+							<input type="submit" class="ui-button ui-button-ldisable" value="注册">
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+	</div>
+</div>
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">登陆</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container">
+			<div class="ui-box-content">
+				<form class="ui-form ui-form-large" name="" method="post" action="#" id="">
+					<fieldset>
+						<legend>用户登陆</legend>
+
+						<div class="ui-form-item">
+							<label for="" class="ui-label">
+								<span class="ui-form-required">*</span>帐户
+							</label>
+							<input class="ui-input" type="text" placeholder="用户名/邮箱/手机号">
+						
+						</div>
+
+						<div class="ui-form-item">
+							<label for="" class="ui-label">密码</label>
+							<input class="ui-input ui-input-large" type="password">
+						</div>
+
+						<div class="ui-form-item">
+							<input class="ui-checkbox" id="test2" value="" type="checkbox">
+							<label class="ui-checkbox-label" for="test2">记住登陆</label>
+						</div>
+
+						<div class="ui-form-item ui-form-item-last">
+							<input type="submit" class="ui-button ui-button-lorange" value="确定">
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+	</div>
+</div>
+
+
+
+
+<hr />
+<div class="ui-box">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">所有用户认购信息</h3>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+	<div class="ui-box-container">
+			<div class="ui-box-content">
+				<table class="ui-table"><!-- 可以在class中加入ui-table-inbox或ui-table-noborder分别适应不同的情况 -->
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>用户名</th>
+							<th>购买时间</th>
+							<th>金额<em class="ft-bar">|</em>明细</th>
+							<th>拥有股份</th>
+							<th>资金</th>
+							<th>备注</th>
+						</tr>
+					</thead><!-- 表头可选 -->
+					<tbody>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr class="ui-table-split">
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr class="ui-table-split">
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+					</tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="7">表尾数据</td>
+						</tr>
+					</tfoot><!-- 表尾可选 -->
+				</table>
+				<div class="ui-paging ui-tipbox-ctrl">
+					<a href="#" class="ui-paging-prev">
+						<i class="iconfont" title="左三角形">&#xF039;</i> 上一页
+					</a>
+					<a href="#" class="ui-paging-item">1</a>
+					<a href="#" class="ui-paging-item ui-paging-current">2</a>
+					<a href="#" class="ui-paging-item">3</a>
+					<span class="ui-paging-ellipsis">...</span>
+					<a href="#" class="ui-paging-item">24</a>
+					<a href="#" class="ui-paging-next">
+						下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
+					</a>
+					<span class="ui-paging-info"><span class="ui-paging-bold">5/7</span>页</span>
+					<span class="ui-paging-which"><input name="some_name" value="6" type="text"></span>
+					<a class="ui-paging-info ui-paging-goto" href="#">跳转</a>
+				</div>
+			</div>
+	</div>
+</div>
+
+
+
+
+<hr />
+<div class="ui-box" style="width:600px">
+    <div class="ui-box-head">
+        <h3 class="ui-box-head-title">区块标题</h3>
+        <span class="ui-box-head-text">其他文字</span>
+        <a href="#" class="ui-box-head-more"><i class="iconfont" title="关闭">&#xF045;</i></a>
+    </div>
+    <div class="ui-box-container">
+        <div class="ui-box-content">
+						<table class="ui-table">
+						<!-- 可以在class中加入ui-table-inbox或ui-table-noborder分别适应不同的情况 -->
+					<thead>
+						<tr>
+							<th>序号</th>
+							<th>用户名</th>
+							<th>购买时间</th>
+							<th>金额<em class="ft-bar">|</em>明细</th>
+							<th>拥有股份</th>
+							<th>资金</th>
+							<th>备注</th>
+						</tr>
+					</thead><!-- 表头可选 -->
+					<tbody>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr class="ui-table-split">
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr class="ui-table-split">
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+					</tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="7">表尾数据</td>
+						</tr>
+					</tfoot><!-- 表尾可选 -->
+				</table>
+		</div>
+		 <div class="ui-box-content">
+			<div class="ui-paging">
+					<a href="#" class="ui-paging-prev">
+						<i class="iconfont" title="左三角形">&#xF039;</i> 上一页
+					</a>
+					<a href="#" class="ui-paging-item">1</a>
+					<a href="#" class="ui-paging-item ui-paging-current">2</a>
+					<a href="#" class="ui-paging-item">3</a>
+					<span class="ui-paging-ellipsis">...</span>
+					<a href="#" class="ui-paging-item">24</a>
+					<a href="#" class="ui-paging-next">
+						下一页 <i class="iconfont" title="右三角形">&#xF03A;</i>
+					</a>
+					<span class="ui-paging-info"><span class="ui-paging-bold">5/7</span>页</span>
+					<span class="ui-paging-which"><input name="some_name" value="6" type="text"></span>
+					<a class="ui-paging-info ui-paging-goto" href="#">跳转</a>
+				</div>
+		</div>
+    </div>
+</div>
+</body>
+</html>
